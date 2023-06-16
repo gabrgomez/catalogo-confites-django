@@ -1,0 +1,119 @@
+/* Estilos generales del footer */
+footer {
+    font-size: 14px;
+    display: flex;
+    
+  }
+  
+  /* Estilos para los enlaces del footer */
+  footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilos para el contenedor principal */
+  footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Estilos para las columnas */
+  footer .col-md-4 {
+    padding: 0 15px;
+    
+  }
+  
+  /* Estilos para los íconos de Font Awesome */
+  footer .fa {
+    margin-right: 10px;
+  }
+  
+  /* Estilos para la lista de redes sociales */
+  footer .list-inline {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  footer .list-inline-item {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  /* Estilos para el fondo */
+  footer.bg-custom {
+    background-color: #009E46;
+  }
+
+
+  header {
+	background-color: #dfe28e;
+	color: #252ba7;
+	padding: 10px;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+nav li {
+	margin-right: 20px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.slider {
+	position: relative;
+	overflow: hidden;
+	height: 400px;
+}
+
+.slider img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+}
+
+.slider img.active {
+	opacity: 1;
+}
+
+.navbar-custom {
+  background-color: #FF56A0;
+}
+
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: rgb(255, 255, 255);
+} 
+.redes {
+    width: 80%;
+	
+    text-align: center;
+  }
+  
+  .redes ul li {
+    background-color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+  }

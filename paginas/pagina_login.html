@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Sweet & Salty</title>
+    
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- jquery validate via cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
+    <!-- Agregar las hojas de estilo de Bootstrap y CSS personalizado -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/estilo3.css">
+    <link rel="stylesheet" href="../css/estilo5.css">
+    <link rel="stylesheet" href="../css/flexboxgrid.css" type="text/css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-custom bg-custom">
+    <a class="navbar-brand" href="#"><img id="logo" src="../img/Logotipo-chico.png" alt="logo"></a>
+        
+        <button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./../index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../paginas/pagina_snacks.html">Snacks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../paginas/pagina_dulces.html">Dulces</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../paginas/pagina_cotiza.html">Contactanos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../paginas/pagina_login.html">Registrarme</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../paginas/pagina_api.html">API</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+  <h1>Registrarme</h1>
+  <form id="login-form" method="post" class="container">
+      <div id="formulario">
+       <label for="firstname">Nombre</label>
+    <input type="text" name="firstname" id="firstname" placeholder="ingrese nombre..." required>
+    
+    <label for="lastname">primer apellido</label>
+    <input type="text" name="lastname1" id="lastname1" placeholder="ingrese primer apellido..." required>
+
+    <label for="lastname">segundo apellido</label>
+    <input type="text" name="lastname2" id="lastname2" placeholder="ingrese segundo apellido..." required>
+     
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Ingrese email..." required>
+
+
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" name="password" minlength="8" placeholder="Ingrese contraseña..." required>
+
+
+    <input type="submit"  id="btnRegistro" value="Registrarme">
+       </div>
+  </form>
+  
+
+        <!-- footer -->
+
+        <footer class="bg-custom text-white py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5 class="box">Información de contacto</h5>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Calle Principal, Ciudad</p>
+                        <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                        <p><i class="fas fa-envelope"></i> info@sweetandsalty.com</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="box">Enlaces útiles</h5>
+                       <ul class="list-unstyled">
+                            <li><a href="#">Inicio</a></li>
+                            <li><a href="../paginas/pagina_dulces.html">dulces</a></li>
+                            <li><a href="../paginas/pagina_snacks.html">salados</a></li>
+                            <li><a href="../paginas/pagina_cotiza.html">Contactanos</a></li>
+                            <li><a href="../paginas/pagina_login.html">Registrarme</a></li>
+                            <li><a href="../paginas/pagina_api.html">API</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="box">Síguenos</h5>
+                        <div class="redes">
+                            <ul>
+                                <li><a title="facebook" href="http://facebook.com"><img src="../img/icons/icons8-facebook.svg" alt="facebook" ></a>
+                                </li>
+                                <li><a title= "google+" href="http://google.com"><img src="../img/icons/icons8-logo-de-google.svg" alt="google+" ></a>
+                                </li>
+                                <li><a title= "instagram" href="http://instagram.com"><img src="../img/icons/icons8-instagram.svg" alt="instagram" ></a>
+                                </li>
+                                <li><a title="mail" href="http://gmail.com"><img src="../img/icons/icons8-logo-de-google.svg" alt="mail" ></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+<script src="../js/form.js"></script>
+    </body>
+    </html>
+
+
