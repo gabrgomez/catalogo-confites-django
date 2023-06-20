@@ -55,6 +55,25 @@ def ModificarProducto(request,codigo):
             instancia.save()
     return render(request,'catalogo/modificar_producto.html', {'form':form})
 
+def home(request):
+    return render(request, 'base.html')
 
+def pagina_api(request):
+    return render(request, 'pagina_api.html')
+
+def pagina_cotiza(request):
+    return render(request, 'pagina_cotiza.html')
+
+def pagina_dulces(request):
+    return render(request, 'pagina_dulces.html')
+
+def pagina_login(request):
+    return render(request, 'pagina_login.html')
+
+def pagina_snacks(request):
+    return render(request, 'pagina_snacks.html')
+
+def index(request):
+    return render(request, 'index.html')
 
 

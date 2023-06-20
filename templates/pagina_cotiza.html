@@ -1,0 +1,18 @@
+{% extends 'base.html' %} 
+{% block content %}
+    <!-- formulario -->
+
+    <h1>Formulario de Contacto</h1>
+    <form id="formulario" method="POST">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Ingrese nombre" required>
+
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" id="correo" name="correo" placeholder="Ingrese correo" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" placeholder="Ingrese mensaje" required></textarea>
+
+      <button type="submit" id="boton">Enviar</button>
+    </form>
+    {% endblock %}

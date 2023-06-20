@@ -1,0 +1,32 @@
+{% extends 'base.html' %} 
+{% block content %}
+
+
+  <h1>Registrarme</h1>
+  <form id="login-form" method="post" class="container">
+      <div id="formulario">
+       <label for="firstname">Nombre</label>
+    <input type="text" name="firstname" id="firstname" placeholder="ingrese nombre..." required>
+    
+    <label for="lastname">primer apellido</label>
+    <input type="text" name="lastname1" id="lastname1" placeholder="ingrese primer apellido..." required>
+
+    <label for="lastname">segundo apellido</label>
+    <input type="text" name="lastname2" id="lastname2" placeholder="ingrese segundo apellido..." required>
+     
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Ingrese email..." required>
+
+
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" name="password" minlength="8" placeholder="Ingrese contraseña..." required>
+
+
+    <input type="submit"  id="btnRegistro" value="Registrarme">
+       </div>
+  </form>
+
+{% endblock %}
+
+     
+

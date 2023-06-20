@@ -1,0 +1,64 @@
+{% extends 'base.html' %} 
+{%load static %}
+{% block content %}
+<!-- Carrusel de imágenes -->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{% static 'img/inicio.jpg' %}" class="d-block w-100" alt="dulces y salado">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'img/snacks.jpg' %}"class="d-block w-100" alt="snacks">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'img/dulces.jpg' %}" class="d-block w-100" alt="dulces">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+    </a>
+</div>
+
+<!-- nuestro productos -->
+
+<div id="confites" class="portfolio">
+    <div class="container">
+      <div class="row text-center text-lg-start">
+        <div class="col-lg-10 col-lg-offset-1 text-lg-center text">
+          <h3>Nuestros productos</h3>
+          <div class="row text-center text-lg-start">
+            <div class="col-lg-3 col-md-4 col-6">
+              <div class="confite-item"> <a href="#" class="d-block mb-4 h-100"> <img class="img-fluid img-thumbnail" src="{% static 'img/cookie-500x500.jpg' %}" alt="cookie"> </a> </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+              <div class="confite-item"> <a href="#" class="d-block mb-4 h-100"> <img class="img-fluid img-thumbnail" src="{% static 'img/candy-500x500.png'%}" alt="candy"> </a> </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="confite-item"> <a href="#" class="d-block mb-4 h-100"> <img class="img-fluid img-thumbnail" src="{% static 'img/Galletas-Saladas-500x500.jpg'%}" alt="galletas_saladas"> </a> </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <div class="confite-item"> <a href="#" class="d-block mb-4 h-100"> <img class="img-fluid img-thumbnail" src="{% static 'img/snacks-500.jpg'%}" alt="snacks"> </a> </div>
+              </div>
+          </div>
+          <!-- /.row (nested) --> 
+          <a href="#" class="view-more">¡Volver arriba!</a> </div>
+        <!-- /.col-lg-10 --> 
+      </div>
+      <!-- /.row --> 
+    </div>
+    <!-- /.container --> 
+  </div>
+
+
+
+{% endblock %}
