@@ -27,6 +27,7 @@ urlpatterns = [
     path('catalogo/',include('catalogo.urls')),
     path('usuario/', include('Usuario.urls')),
 
+
     
     path('login/', LoginView.as_view(redirect_authenticated_user=True,template_name='Usuario/login.html'), name='login'),
     path('logout/', LogoutView.as_view(template_name='Usuario/logout.html'), name='logout'),
@@ -36,6 +37,7 @@ urlpatterns = [
     path('cotiza/',pagina_cotiza,name='pagina_cotiza'),
     path('dulces/',pagina_dulces,name='pagina_dulces'),
     path('login/',pagina_login,name='pagina_login'),
+    path('snacks/',pagina_snacks,name='pagina_snacks'),
     path('snacks/',pagina_snacks,name='pagina_snacks'),
    
 ]

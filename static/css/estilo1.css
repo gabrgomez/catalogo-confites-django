@@ -1,5 +1,6 @@
 /* Estilos generales del footer */
 footer {
+  
     font-size: 14px;
     display: flex;
     
@@ -51,7 +52,7 @@ footer {
   }
 
   header {
-	background-color: #dfe28e;
+	background-color: #FF56A0;
 	color: #252ba7;
 	padding: 10px;
 }
