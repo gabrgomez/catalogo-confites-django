@@ -1,0 +1,3 @@
+cuenta super usuario
+user: gabym
+contraseña: 1234
