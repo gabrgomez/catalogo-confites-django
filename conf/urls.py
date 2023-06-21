@@ -17,15 +17,25 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from catalogo.views import home, pagina_api,pagina_cotiza,pagina_dulces,pagina_login,pagina_snacks,index
+from django.contrib.auth.views import LoginView, LogoutView
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
+    path('',index,name='home'),
+
     path('admin/', admin.site.urls),
     path('catalogo/',include('catalogo.urls')),
-    path('home/',home,name='home'),
+    path('usuario/', include('Usuario.urls')),
+
+    
+    path('login/', LoginView.as_view(redirect_authenticated_user=True,template_name='Usuario/login.html'), name='login'),
+    path('logout/', LogoutView.as_view(template_name='Usuario/logout.html'), name='logout'),
+
+
     path('api/',pagina_api,name='pagina_api'),
     path('cotiza/',pagina_cotiza,name='pagina_cotiza'),
     path('dulces/',pagina_dulces,name='pagina_dulces'),
     path('login/',pagina_login,name='pagina_login'),
     path('snacks/',pagina_snacks,name='pagina_snacks'),
-    path('',index,name='index'),
+   
 ]

@@ -1,7 +1,48 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 
- 
+<table>
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th> </th>
+        <th>Nombre</th>
+        <th> </th>
+        <th>Precio</th>
+        <th> </th>
+       <th>fecha Elaboracion</th>
+       <th> </th>
+        <th>Fecha Vencimiento</th>
+        <th> </th>
+        <th>Imagen</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      {% for producto in productos %}
+      <tr>
+        <td>{{ producto.codigo }}</td>
+        <td> </td>
+        <td>{{ producto.nombre }}</td>
+        <td> </td>
+        <td>{{ producto.precio }}</td>
+        <td> </td>
+        <td>{{ producto.fch_elab }}</td>
+        <td> </td>
+        <td>{{ producto.fch_vence }}</td>
+       <td>
+        <img src= {{ STATIC_URL }}/media/{{ producto.imagen }} style="width: 100px;"/> </td>
+        
+               
+        <td>
+            {% comment %} <a class="btn btn-primary" href="{% url 'modificar_producto' producto.pk  %}">Editar</a>
+            <a class="btn btn-danger" href="{% url 'eliminar_producto'  producto.pk  %}">Eliminar</a> {% endcomment %}
+            
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 
 {% endblock %}

@@ -1,6 +1,15 @@
 {% extends 'base.html' %} 
 {%load static %}
 {% block content %}
+
+<!-- -->
+{% if user.is_authenticated %}
+<p>¡bienvenido!</p>
+<p>Su Nombre - {{user.first_name}} {{user.last_name}}</p>
+<p>Su E-Mail - {{user.email}}</p>
+<br><br>
+{% endif %}
+
 <!-- Carrusel de imágenes -->
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -30,6 +39,9 @@
 </div>
 
 <!-- nuestro productos -->
+
+
+
 
 <div id="confites" class="portfolio">
     <div class="container">

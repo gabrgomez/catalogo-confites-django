@@ -118,14 +118,21 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
-MEDIA_ROOT = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static', 'images')
 STATIC_ROOT = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static', 'static-only')
+
 
 MEDIA_URL = '/media/'
 
+MEDIA_ROOT = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'media', 'catalogo')
+
 STATICFILES_DIRS = [
 BASE_DIR / 'static',]
+
+MEDIAFILES_DIRS = [
+BASE_DIR / 'media',]
+
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

@@ -1,11 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.shortcuts import redirect
 import django.http as http
 from .forms import CrearProductoForm
 from .models import Producto
 
-def home(request):
-    return render(request, 'base.html')
+#c-------------------CRUD--------------------------
 #-------------------------------
 #crear producto
 def CrearProducto(request):
@@ -29,7 +28,8 @@ def CrearProducto(request):
 #listar producto
 def ListarProducto(request):
     lista_productos = Producto.objects.all()
-    return render(request, 'catalogo/listar_producto.html', {'productos':lista_productos})
+    return render(request, "catalogo/listar_producto.html",
+    {'productos':lista_productos})
 
 
 
@@ -37,24 +37,29 @@ def ListarProducto(request):
 #eliminar producto
 def EliminarProducto(request,codigo):
     #CtgProdCod
-    instancia = Producto.objects.get(codigo=codigo)
-    instancia.delete()
+    instancia = get_object_or_404(Producto, CtgProdCod=codigo)
+    if request.method == 'POST':
+        instancia.delete()
+        return redirect('lista_productos')
 
-    return redirect('lista_productos')
+    return render(request,'catalogo/eliminar_producto.html', {'productos': instancia})
 #-------------------------------
 #modificar producto
 def ModificarProducto(request,codigo):
-    instancia = Producto.objects.get(codigo=codigo)
+    instancia = get_object_or_404(Producto, CtgProdCod= codigo)
 
     form = CrearProductoForm(instance=instancia)
 
     if request.method == "POST":
-        form = CrearProductoForm(request.POST,instance=instancia )
+        form = CrearProductoForm(request.POST, request.FILES, instance=instancia )
         if form.is_valid():
             instancia = form.save(commit=False)
             instancia.save()
-    return render(request,'catalogo/modificar_producto.html', {'form':form})
+    else:
+        form = CrearProductoForm(instance=instancia)
+    return render(request,'catalogo/modificar_producto.html', {'form':form, 'productos': instancia})
 
+#-------------------VISTAS GENERALES--------------------------
 def home(request):
     return render(request, 'base.html')
 
