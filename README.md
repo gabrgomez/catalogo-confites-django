@@ -1,3 +1,6 @@
 # catalogo-confites
 proyecto de catalogo de confites para clase de programación web
-Gabriela Gomez/Loreto Diaz seccion 002D
+Gabriela Gomez
+Loreto Diaz 
+seccion 002D
+credienciales en archivo admin-confites.txt
