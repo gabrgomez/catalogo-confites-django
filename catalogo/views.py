@@ -38,7 +38,7 @@ def ListarProducto(request):
 #eliminar producto
 def EliminarProducto(request,codigo):
     #CtgProdCod
-    instancia = get_object_or_404(Producto, CtgProdCod=codigo)
+    instancia = get_object_or_404(Producto, codigo=codigo)
     if request.method == 'POST':
         instancia.delete()
         return redirect('lista_productos')
@@ -47,7 +47,7 @@ def EliminarProducto(request,codigo):
 #-------------------------------
 #modificar producto
 def ModificarProducto(request,codigo):
-    instancia = get_object_or_404(Producto, CtgProdCod= codigo)
+    instancia = get_object_or_404(Producto, codigo=codigo)
 
     form = CrearProductoForm(instance=instancia)
 
