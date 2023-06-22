@@ -31,9 +31,9 @@
         <td>{{ producto.fch_elab }}</td>
         <td> </td>
         <td>{{ producto.fch_vence }}</td>
-       <td>
-        <img src= {{ STATIC_URL }}/media/{{ producto.imagen }} style="width: 100px;"/> </td>
-        
+        <td>
+        {% comment %} <img src= {{ STATIC_URL }}/media/{{ producto.imagen }} style="width: 100px;"/> </td> {% endcomment %}
+        <img src="{{ producto.imagen.url }}" style="width: 100px;">
                
         <td>
             {% comment %} <a class="btn btn-primary" href="{% url 'modificar_producto' producto.pk  %}">Editar</a>
