@@ -2,5 +2,10 @@
 {% load static %}
 {% block content %}
 
+<p>¿Estás seguro de que deseas eliminar el producto "{{ producto.nombre }}"?</p>
+<form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <button type="submit">Eliminar</button>
+    </form>
 
 {% endblock %}
