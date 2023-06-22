@@ -32,11 +32,15 @@
                     <a class="nav-link" href="{% url 'pagina_cotiza' %}">Contactanos</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="{% url 'pagina_api' %}">API</a>
                     {% if user.is_authenticated %}
-                <a class= "nav-link" href="{% url 'logout' %}">Cerrar Sesión</a>
+                <li class="nav-item">
+                    <a class= "nav-link" href="{% url 'logout' %}">Cerrar Sesión</a>
                 </li>
-                <a class= "nav-link" href="{% url 'lista_productos' %}">listar productos</a>
+                <li class="nav-item">
+                    <a class= "nav-link" href="{% url 'lista_productos' %}">listar productos</a>
                 </li>
+                    <li class="nav-item">
                 <a class= "nav-link" href="{% url 'crear_producto' %}">crear productos</a>
                 </li>
                 {% comment %} <a class= "nav-link" href="{% url 'eliminar_producto' %}">eliminar productos</a> {% endcomment %}
@@ -47,8 +51,7 @@
                 <a class="nav-link" href="{% url 'login' %}">Iniciar Sesión</a>
                 {% endif %}
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'pagina_api' %}">API</a>
+                
                 </li>
               </ul>
           </div>

@@ -13,7 +13,8 @@ def CrearProducto(request):
 
     if request.method == 'POST':
         print('datos procesados')
-        form = CrearProductoForm(request.POST)
+        form = CrearProductoForm(request.POST,request.FILES)
+        
         context['form'] = form
 
         if form.is_valid():
