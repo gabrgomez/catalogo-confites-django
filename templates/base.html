@@ -31,8 +31,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'pagina_cotiza' %}">Contactanos</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'pagina_api' %}">API</a>
+                
                     {% if user.is_authenticated %}
                 <li class="nav-item">
                     <a class= "nav-link" href="{% url 'logout' %}">Cerrar Sesión</a>
