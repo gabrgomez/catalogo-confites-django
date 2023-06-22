@@ -3,10 +3,11 @@ from django.shortcuts import redirect
 import django.http as http
 from .forms import CrearProductoForm
 from .models import Producto
-
+from django.contrib.auth.decorators import login_required
 #c-------------------CRUD--------------------------
 #-------------------------------
 #crear producto
+@login_required
 def CrearProducto(request):
     context = dict()
     context['form'] = CrearProductoForm()
@@ -27,6 +28,7 @@ def CrearProducto(request):
     return render(request, 'catalogo/crear_producto.html', context)
 #-------------------------------
 #listar producto
+@login_required
 def ListarProducto(request):
     lista_productos = Producto.objects.all()
     return render(request, "catalogo/listar_producto.html",
@@ -36,6 +38,7 @@ def ListarProducto(request):
 
 #-------------------------------
 #eliminar producto
+@login_required
 def EliminarProducto(request,codigo):
     #CtgProdCod
     instancia = get_object_or_404(Producto, codigo=codigo)
@@ -46,6 +49,7 @@ def EliminarProducto(request,codigo):
     return render(request,'catalogo/eliminar_producto.html', {'productos': instancia})
 #-------------------------------
 #modificar producto
+@login_required
 def ModificarProducto(request,codigo):
     instancia = get_object_or_404(Producto, codigo=codigo)
 
