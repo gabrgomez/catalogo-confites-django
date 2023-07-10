@@ -49,3 +49,7 @@ form label,
   h1{
     text-align: center;
   }
+  body {
+    background-color: #f1c4d7; /* Color de fondo deseado */
+  }
+  
