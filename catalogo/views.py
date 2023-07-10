@@ -5,6 +5,13 @@ from .forms import CrearProductoForm
 from .models import Producto
 from django.contrib.auth.decorators import login_required
 #c-------------------CRUD--------------------------
+
+#-------------------------------
+#ver producto
+@login_required
+def VerProducto(request,codigo):
+    prod = get_object_or_404(Producto, codigo=codigo)    
+    return render(request, 'catalogo/ver_producto.html', {'producto':prod})
 #-------------------------------
 #crear producto
 @login_required
@@ -24,29 +31,9 @@ def CrearProducto(request):
         else:
             print(form.errors)
 
-
     return render(request, 'catalogo/crear_producto.html', context)
-#-------------------------------
-#listar producto
-@login_required
-def ListarProducto(request):
-    lista_productos = Producto.objects.all()
-    return render(request, "catalogo/listar_producto.html",
-    {'productos':lista_productos})
 
 
-
-#-------------------------------
-#eliminar producto
-@login_required
-def EliminarProducto(request,codigo):
-    #CtgProdCod
-    instancia = get_object_or_404(Producto, codigo=codigo)
-    if request.method == 'POST':
-        instancia.delete()
-        return redirect('lista_productos')
-
-    return render(request,'catalogo/eliminar_producto.html', {'productos': instancia})
 #-------------------------------
 #modificar producto
 @login_required
@@ -60,9 +47,37 @@ def ModificarProducto(request,codigo):
         if form.is_valid():
             instancia = form.save(commit=False)
             instancia.save()
+            return redirect(f'/catalogo/ver/{instancia.codigo}')
+            # return render(request, 'catalogo/ver_producto.html', context)     
     else:
         form = CrearProductoForm(instance=instancia)
     return render(request,'catalogo/modificar_producto.html', {'form':form, 'productos': instancia})
+
+#-------------------------------
+#eliminar producto
+@login_required
+def EliminarProducto(request,codigo):
+    #CtgProdCod
+    instancia = get_object_or_404(Producto, codigo=codigo)
+    if request.method == 'POST':
+        instancia.delete()
+        return redirect('lista_productos')
+
+    return render(request,'catalogo/eliminar_producto.html', {'producto': instancia})
+
+
+
+
+#-------------------------------
+#listar producto
+@login_required
+def ListarProducto(request):
+    lista_productos = Producto.objects.all()
+    return render(request, "catalogo/listar_producto.html",
+    {'productos':lista_productos})
+
+
+
 
 #-------------------VISTAS GENERALES--------------------------
 def home(request):
@@ -78,7 +93,7 @@ def pagina_dulces(request):
     return render(request, 'pagina_dulces.html')
 
 def pagina_login(request):
-    return render(request, 'pagina_login.html')
+    return render(request, 'login')
 
 def pagina_snacks(request):
     return render(request, 'pagina_snacks.html')

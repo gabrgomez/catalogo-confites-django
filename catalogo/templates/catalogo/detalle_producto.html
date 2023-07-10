@@ -1,0 +1,40 @@
+<table>
+    <tr>
+      <th colspan="2">Detalles del producto</th>
+    </tr>
+
+    <tr>
+        <td>Codigo</td>
+        <td>{{producto.codigo}}</td>
+    </tr>
+
+    <tr>
+        <td>Nombre</td>
+        <td>{{producto.nombre}}</td>
+    </tr>
+
+    <tr>
+        <td>Precio</td>
+        <td>{{producto.precio}}</td>
+    </tr>
+
+    <tr>
+        <td>Fecha de elaboracion</td>
+        <td>{{producto.fch_elab}}</td>
+    </tr>
+
+    <tr>
+        <td>Fecha vencimiento</td>
+        <td>{{producto.fch_vence}}</td>
+    </tr>
+
+    <tr>
+        <td>Tipo</td>
+        <td>{{producto.tipo}}</td>
+    </tr>
+
+    <tr>
+        <td colspan="2"><img src="{{producto.imagen.url}}" alt="Producto {{producto.codigo}}" style="max-width: 250px;"></td>
+    </tr>
+
+</table>

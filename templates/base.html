@@ -42,12 +42,13 @@
                     <li class="nav-item">
                 <a class= "nav-link" href="{% url 'crear_producto' %}">crear productos</a>
                 </li>
-                {% comment %} <a class= "nav-link" href="{% url 'eliminar_producto' %}">eliminar productos</a> {% endcomment %}
-                </li>
-                {% comment %} <a class= "nav-link" href="{% url 'modificar_producto' %}">modificar productos</a> {% endcomment %}
-                </li>
                 {% else %}
+                <li class="nav-item">
                 <a class="nav-link" href="{% url 'login' %}">Iniciar Sesión</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'registrar' %}">Registrarme</a>
+                </li>
                 {% endif %}
                 </li>
                 
@@ -77,7 +78,7 @@
                     <li><a href="{% url 'pagina_dulces' %}">dulces</a></li>
                     <li><a href="{% url 'pagina_snacks' %}">salados</a></li>
                     <li><a href="{% url 'pagina_cotiza' %}">Contactanos</a></li>
-                    <li><a href="{% url 'pagina_login' %}">Registrarme</a></li>
+                    <li><a href="{% url 'login' %}">Iniciar sesion</a></li>
                     <li><a href="{% url 'pagina_api' %}">API</a></li>
                 </ul>
             </div>

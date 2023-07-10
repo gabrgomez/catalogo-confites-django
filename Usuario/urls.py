@@ -5,7 +5,7 @@ from django.contrib.auth.views import LoginView
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
-    path('registrar', RegistroUsuario.as_view(), name="registrar"),
+    path('registrar', views.RegistroUsuario, name="registrar"),
     path('listar', UserList.as_view(), name="list_user"),
     
 ]

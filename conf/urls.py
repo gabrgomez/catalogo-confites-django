@@ -37,9 +37,9 @@ urlpatterns = [
 
     path('api/',pagina_api,name='pagina_api'),
     path('cotiza/',pagina_cotiza,name='pagina_cotiza'),
+    
     path('dulces/',pagina_dulces,name='pagina_dulces'),
-    path('login/',pagina_login,name='pagina_login'),
     path('snacks/',pagina_snacks,name='pagina_snacks'),
-    path('snacks/',pagina_snacks,name='pagina_snacks'),
+    
    
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
