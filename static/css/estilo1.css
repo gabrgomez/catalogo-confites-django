@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #f1c4d7; /* Color de fondo deseado */
 }
 
 /* Estilos generales del footer */
@@ -52,12 +53,12 @@ footer {
   }
   
   /* Estilos para el fondo */
-  footer.bg-custom {
-    background-color: #009E46;
+  footer {
+    background-color: #8d187f; /* Color de fondo deseado */
   }
 
   header {
-	background-color: #FF56A0;
+	background-color: #e73180;
 	color: #252ba7;
 	padding: 10px;
 }
@@ -109,7 +110,7 @@ height: 500px;
 }
 
 .navbar-custom {
-    background-color: #FF56A0;
+    background-color: #e73180;
 }
 
 .custom-toggler .navbar-toggler-icon {
@@ -134,9 +135,9 @@ height: 500px;
 }
 
 .carousel-inner {
-  border-right: 180px solid #FFFFFF; 
+  border-right: 180px solid #f1c4d7; 
 
-  border-left: 180px solid #FFFFFF; 
+  border-left: 180px solid #f1c4d7; 
 }
 
 @media screen and (max-width: 800px) {
