@@ -47,12 +47,12 @@ footer .list-inline-item {
 
 /* Estilos para el fondo */
 footer.bg-custom {
-  background-color: #009E46;
+  background-color: #ac10a1;
 }
 
 header {
 background-color: #dfe28e;
-color: #252ba7;
+color: #FF56A0;
 padding: 10px;
 }
 
@@ -139,3 +139,7 @@ border-left: 180px solid #FFFFFF;
   border-right: 0px;
 }
 }
+body {
+  background-color: #f1c4d7; /* Color de fondo deseado */
+}
+
