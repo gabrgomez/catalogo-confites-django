@@ -1,0 +1,30 @@
+.detalle-producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  .detalle-producto h2 {
+    margin-bottom: 10px;
+  }
+  
+  .detalle-producto p {
+    margin-bottom: 5px;
+  }
+  
+  .detalle-producto img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .detalle-producto .btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+  }
+  
