@@ -45,10 +45,9 @@ footer {
   }
   
   /* Estilos para el fondo */
-  footer.bg-custom {
-    background-color: #009E46;
+  .footer.bg-custom {
+    background-color: #ac10a1;
   }
-
 
   header {
 	background-color: #dfe28e;
@@ -117,3 +116,7 @@ nav a {
     height: 50px;
     display: inline-block;
   }
+  body {
+    background-color: #f1c4d7; /* Color de fondo deseado */
+  }
+  
