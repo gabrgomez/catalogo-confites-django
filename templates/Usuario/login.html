@@ -8,6 +8,16 @@
 
 <div id="registro" class="container">
     <h1 class="display">Login</h1><br>
+    {% if form.non_field_errors %}
+            <ul>
+            {% for error in form.non_field_errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+
+        {# To really make sure you debug this #}
+        {{ form.errors }}
     <form method="POST" id="formulario">
         {% csrf_token %}
 
