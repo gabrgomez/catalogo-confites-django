@@ -1,3 +1,7 @@
 cuenta super usuario
 user: gabym
 contraseña: 1234
+
+cuenta normal:
+user: trinidad
+contraseña:LOre12345.
